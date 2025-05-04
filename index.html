@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HyperQ Robotics - QINA 3D Warehouse Demo</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Import Three.js -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/libs/stats.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="info">
+            <h1>HyperQ Robotics - QINA Technology</h1>
+            <p>Quantum-Inspired Neural Algorithm for Warehouse Automation</p>
+        </div>
+        <div id="metrics">
+            <div class="metric-panel baseline">
+                <h2>Baseline Model</h2>
+                <div class="metric">
+                    <span class="label">Processing Time:</span>
+                    <span id="baseline-time" class="value">0.000 s</span>
+                </div>
+                <div class="metric">
+                    <span class="label">Miss Rate:</span>
+                    <span id="baseline-miss" class="value">0.0%</span>
+                </div>
+            </div>
+            <div class="metric-panel qina">
+                <h2>QINA Model</h2>
+                <div class="metric">
+                    <span class="label">Processing Time:</span>
+                    <span id="qina-time" class="value">0.000 s</span>
+                </div>
+                <div class="metric">
+                    <span class="label">Miss Rate:</span>
+                    <span id="qina-miss" class="value">0.0%</span>
+                </div>
+                <div class="metric">
+                    <span class="label">Improvement:</span>
+                    <span id="improvement" class="value"></span>
+                </div>
+            </div>
+        </div>
+        <div id="controls">
+            <button id="toggle-model">Switch Model (QINA ⟷ Baseline)</button>
+            <button id="reset-simulation">Reset Simulation</button>
+            <div class="model-indicator">
+                <span>Active Model:</span>
+                <span id="active-model" class="model-qina">QINA</span>
+            </div>
+        </div>
+        <div id="canvas-container"></div>
+    </div>
+
+    <div id="technology-info">
+        <h2>QINA Technology</h2>
+        <p>HyperQ Robotics' Quantum-Inspired Neural Algorithm (QINA) combines advanced AI with principles from quantum computing:</p>
+        <div class="tech-components">
+            <div class="component">
+                <h3>Tensor Networks</h3>
+                <p>Mathematical structures that efficiently handle complex data patterns, reducing noise in visual processing.</p>
+            </div>
+            <div class="component">
+                <h3>Variational Circuits</h3>
+                <p>Quantum-inspired parametric models that optimize feature transformations for more consistent object detection.</p>
+            </div>
+            <div class="component">
+                <h3>Performance Improvements</h3>
+                <p>QINA achieves 15% faster processing with 5x reduction in detection errors compared to conventional models.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/qina-algorithm.js"></script>
+    <script src="js/warehouse-environment.js"></script>
+    <script src="js/robot.js"></script>
+    <script src="js/pathfinding.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
